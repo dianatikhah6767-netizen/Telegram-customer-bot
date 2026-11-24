@@ -5,7 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+concurrency:
+        group: telegram-customer-bot 
+      cancel-in-progress: true
 jobs:
   run-bot:
     runs-on: ubuntu-latest
